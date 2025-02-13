@@ -1,0 +1,124 @@
+
+<section class="register-block">
+    <div class="container">
+        <div class="row">
+            <div class="col register-sec">
+                <h2 class="text-center">Register Now</h2>
+                <form class="register-form" action="">
+                    <div class="form-group">
+                        <label for="name" class="text-uppercase">Name</label>
+                        <input type="text" class="form-control" name="name" id="name">
+                        <span class="text-danger">Name is required</span>
+                    </div>
+
+                    <div class="form-group"> 
+                        <label for="email" class="text-uppercase">Email</label>
+                        <input type="email" class="form-control" name="email" id="email">
+                        <span class="text-danger">Email is required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="text-uppercase">Password</label>
+                        <input type="password" class="form-control" name="password" id="password">
+                        <span class="text-danger">Custom Error Message</span> 
+                    </div>
+
+                    <div class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-login float-right" value="Register">
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="form-group">
+                        Already have an account? <a href="javascript:void(0);">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--
+<div class="container">
+    <h2>Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <label>First Name</label>
+      <input type="text" formControlName="first_name" />
+      <div *ngIf="registerForm.controls['first_name'].invalid && registerForm.controls['first_name'].touched">
+        <small>First name is required and must start with a letter.</small>
+      </div>
+  
+      <label>Last Name</label>
+      <input type="text" formControlName="last_name" />
+      <div *ngIf="registerForm.controls['last_name'].invalid && registerForm.controls['last_name'].touched">
+        <small>Last name is required and must start with a letter.</small>
+      </div>
+  
+      <label>Email</label>
+      <input type="email" formControlName="email" />
+      <div *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched">
+        <small>Enter a valid email.</small>
+      </div>
+  
+      <label>Password</label>
+      <input type="password" formControlName="password" />
+      <div *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">
+        <small>Password must be 8+ characters, contain an uppercase letter, number, and special character.</small>
+      </div>
+  
+      <button type="submit" [disabled]="registerForm.invalid">Register</button>
+    </form>
+  </div>
+*/-->
+<!-- <div class="container">
+    <h2>Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      
+      
+      <label>First Name</label>
+      <input type="text" formControlName="first_name" />
+      <div *ngIf="registerForm.get('first_name')?.invalid && registerForm.get('first_name')?.touched">
+        <small *ngIf="registerForm.get('first_name')?.errors?.['required']">First name is required.</small>
+        <small *ngIf="registerForm.get('first_name')?.errors?.['pattern']">Must start with a letter.</small>
+        <small *ngIf="registerForm.get('first_name')?.errors?.['maxlength']">Max length is 35 characters.</small>
+      </div>
+
+      
+      <label>Last Name</label>
+      <input type="text" formControlName="last_name" />
+      <div *ngIf="registerForm.get('last_name')?.invalid && registerForm.get('last_name')?.touched">
+        <small *ngIf="registerForm.get('last_name')?.errors?.['required']">Last name is required.</small>
+        <small *ngIf="registerForm.get('last_name')?.errors?.['pattern']">Must start with a letter.</small>
+        <small *ngIf="registerForm.get('last_name')?.errors?.['maxlength']">Max length is 35 characters.</small>
+      </div>
+
+     
+      <label>Email</label>
+      <input type="email" formControlName="email" />
+      <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+        <small *ngIf="registerForm.get('email')?.errors?.['required']">Email is required.</small>
+        <small *ngIf="registerForm.get('email')?.errors?.['email']">Enter a valid email.</small>
+      </div>
+
+      
+      <label>Password</label>
+      <input type="password" formControlName="password" />
+      <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+        <small *ngIf="registerForm.get('password')?.errors?.['required']">Password is required.</small>
+        <small *ngIf="registerForm.get('password')?.errors?.['minlength']">Must be at least 8 characters long.</small>
+        <small *ngIf="registerForm.get('password')?.errors?.['pattern']">
+          Must contain at least 1 uppercase letter, 1 number, and 1 special character.
+        </small>
+      </div>
+
+      
+      <button type="submit" [disabled]="registerForm.invalid">Register</button>
+
+    </form>
+</div> -->
